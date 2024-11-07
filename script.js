@@ -1,7 +1,7 @@
 const projects = [
     {
         title: "Owen's Goated Trickshot",
-        description: 'Amazing throw, Brady-esque',
+        description: 'Amazing throw, Brady-esque!',
         video: '/Users/owenbluman/Downloads/IMG_0448.MOV'
     },
     // Add other projects here
