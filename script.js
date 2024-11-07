@@ -1,21 +1,24 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const projects = [
-        { title: 'Project 1', description: 'Description of project 1', link: '#' },
-        { title: 'Project 2', description: 'Description of project 2', link: '#' },
-        // Add more projects here
-    ];
+const projects = [
+    {
+        title: "Owen's Goated Trickshot",
+        description: 'Amazing throw, Brady-esque',
+        video: '/Users/owenbluman/Downloads/IMG_0448.MOV'
+    },
+    // Add other projects here
+];
 
-    const projectList = document.querySelector('.project-list');
-    projects.forEach(project => {
-        const projectItem = document.createElement('div');
-        projectItem.classList.add('project-item');
+projects.forEach(project => {
+    const projectItem = document.createElement('div');
+    projectItem.classList.add('project-item');
 
-        projectItem.innerHTML = `
-      <h3>${project.title}</h3>
-      <p>${project.description}</p>
-      <a href="${project.link}">View Project</a>
-    `;
+    projectItem.innerHTML = `
+    <h3>${project.title}</h3>
+    <p>${project.description}</p>
+    <video controls width="400">
+      <source src="${project.video}" type="video/quicktime">
+      Your browser does not support the video tag.
+    </video>
+  `;
 
-        projectList.appendChild(projectItem);
-    });
+    document.querySelector('.project-list').appendChild(projectItem);
 });
